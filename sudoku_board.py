@@ -8,7 +8,6 @@ class Sudoku:
 
     def __str__(self) -> str:
         s = ""
-        self.maxDiff = None
         # YOUR CODE HERE
         return s
 
@@ -25,5 +24,6 @@ class Sudoku:
         for fact in model.symbols(shown=True):
             fact_as_string = str(fact)
             sudoku[(int(fact_as_string[7]), int(fact_as_string[9]))] = int(fact_as_string[11])
+
             
         return cls(sudoku)
