@@ -31,7 +31,17 @@ class Sudoku:
     def from_str(cls, s: str) -> "Sudoku":
         sudoku = {}
         # YOUR CODE HERE
-        print(sudoku)
+        s_no_space = s.replace(" ", "")
+        s_no_space = s_no_space.replace("\n", "")
+        row_counter = 0
+        
+        for x in range(len(s_no_space)):
+            if (x % 9) == 0:
+                row_counter += 1
+
+            if s_no_space[x] != "-":
+                sudoku[(row_counter, x % 9 + 1)] = int(s_no_space[x])
+        
         return cls(sudoku)
 
 
