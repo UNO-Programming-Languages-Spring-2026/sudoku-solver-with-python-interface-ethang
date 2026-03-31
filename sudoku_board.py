@@ -8,7 +8,7 @@ class Sudoku:
 
     def __str__(self) -> str:
         s = ""
-        # YOUR CODE HERE
+        # YOUR CODE HERE\
         for row in range(1, 10):
             new_row = True
             for column in range(1, 10):
@@ -23,7 +23,7 @@ class Sudoku:
                 if (row % 3 == 0) and (row != 9) and (column == 9) and (new_row):
                     s += "\n"
                     new_row = False
-
+        
         return s
 
 
@@ -31,6 +31,7 @@ class Sudoku:
     def from_str(cls, s: str) -> "Sudoku":
         sudoku = {}
         # YOUR CODE HERE
+        print(sudoku)
         return cls(sudoku)
 
 
