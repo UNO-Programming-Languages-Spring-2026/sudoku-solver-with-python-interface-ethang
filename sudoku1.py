@@ -9,9 +9,7 @@ class ClingoApp(clingo.application.Application):
             ctl.load("-")
 
         ctl.load("sudoku.lp")
-
         ctl.ground()
-
         ctl.solve()
 
 
